@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Apply background image to the entire body */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1587411126711-256be57d5a69') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+        }
+
+        /* Flex container to center the login form */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Style the login panel */
+        .login-panel {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+        }
+
+        /* Heading style */
+        .login-panel h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        /* Form input fields */
+        .form-control {
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Focus state for inputs */
+        .form-control:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        /* Login button style */
+        .btn-login {
+            background-color: #6c63ff;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for the button */
+        .btn-login:hover {
+            background-color: #5a52e6;
+            transform: translateY(-3px);
+        }
+
+        /* Close button style */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Hover effect for close button */
+        .close-btn:hover {
+            color: #6c63ff;
+        }
+
+        /* Info section */
+        .login-info {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            .login-panel {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-panel">
+            <!-- Close Button -->
+            <a href="demo.html" class="close-btn" title="Go Back to Home">&times;</a>
+
+            <!-- Login Title -->
+            <h2>HR Login</h2>
+
+            <!-- Login Form -->
+            <form action="HR_Dashboard.php" method="POST">
+                <div class="mb-3">
+                    <label for="employeeId" class="form-label">Employee ID</label>
+                    <input type="text" id="employeeId" name="employeeId" class="form-control" placeholder="Enter your Employee ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your Password" required>
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+
+            <!-- Additional Information -->
+            <div class="login-info">
+                <p>Need help? <a href="#">Contact Support</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
