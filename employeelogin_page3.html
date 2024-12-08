@@ -19,11 +19,26 @@
             height: 100vh;
         }
 
+        .navbar {
+            background-color: #1565c0;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #e3f2fd;
+        }
+
         .container {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: calc(100vh - 100px); /* Adjust height for header and footer */
         }
 
         .login-card {
@@ -94,6 +109,15 @@
             color: #555;
         }
 
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1565c0;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+
         @media (max-width: 768px) {
             .login-card {
                 width: 90%;
@@ -103,6 +127,13 @@
 </head>
 
 <body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Employee Tracker</a>
+    </nav>
+
+    <!-- Login Section -->
     <div class="container">
         <div class="login-card">
             <!-- Back Button -->
@@ -111,13 +142,13 @@
             </a>
 
             <!-- Login Title -->
-            <h2>Employee Login</h2>
+            <h2>HR Login</h2>
 
             <!-- Login Form -->
             <form action="Emp_Dashboard.php" method="POST">
                 <div class="mb-3">
-                    <label for="employeeId" class="form-label">Employee ID</label>
-                    <input type="text" id="employeeId" name="employeeId" class="form-control" placeholder="Enter your Employee ID" required>
+                    <label for="HRId" class="form-label">HR ID</label>
+                    <input type="text" id="HRId" name="HRId" class="form-control" placeholder="Enter your HR ID" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -128,10 +159,16 @@
 
             <!-- Additional Information -->
             <div class="login-info">
-                <p>Having trouble logging in? <a href="#" style="color: #1565c0; text-decoration: underline;">Contact Support</a></p>
+                <p>Having trouble logging in? <a href="contact_page5.html" style="color: #1565c0; text-decoration: underline;">Contact Support</a></p>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Employee Performance Tracker. All Rights Reserved.
+    </footer>
+
 </body>
 
 </html>

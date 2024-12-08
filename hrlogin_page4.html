@@ -18,6 +18,20 @@
             font-family: 'Poppins', sans-serif;
             height: 100vh;
         }
+        .navbar {
+            background-color: #1565c0;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #e3f2fd;
+        }
 
         .container {
             display: flex;
@@ -93,6 +107,13 @@
             font-size: 0.9rem;
             color: #555;
         }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1565c0;
+            color: white;
+            font-size: 0.9rem;
+        }
 
         @media (max-width: 768px) {
             .login-card {
@@ -103,6 +124,11 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Employee Tracker</a>
+    </nav>
+    
     <div class="container">
         <div class="login-card">
             <!-- Back Button -->
@@ -128,10 +154,15 @@
 
             <!-- Additional Information -->
             <div class="login-info">
-                <p>Having trouble logging in? <a href="#" style="color: #1565c0; text-decoration: underline;">Contact Support</a></p>
+                <p>Having trouble logging in? <a href="contact_page5.html" style="color: #1565c0; text-decoration: underline;">Contact Support</a></p>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Employee Performance Tracker. All Rights Reserved.
+    </footer>
 </body>
 
 </html>
